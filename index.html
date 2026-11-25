@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SWA Mini Tracking Website - quick access fieldwork resource dashboard">
+  <title>SWA Mini Tracking Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-mark">SWA</div><div><strong>Mini Tracking</strong><small>Fieldwork workspace</small></div></div>
+    <nav aria-label="Main navigation">
+      <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span> Dashboard</button>
+      <button class="nav-item" data-view="resources"><span class="nav-icon">▦</span> Resource Links</button>
+      <button class="nav-item" data-view="about"><span class="nav-icon">ⓘ</span> About</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="side-note"><span class="dot"></span> Quick links workspace</div><small>Independent resource dashboard</small></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button id="menuToggle" class="icon-button" aria-label="Toggle menu">☰</button><div class="top-title"><span>Workspace</span><strong id="pageTitle">Dashboard</strong></div><div class="top-actions"><span class="date-chip" id="dateDisplay"></span><button class="icon-button" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">◐</button></div></header>
+    <section class="page" id="homeView">
+      <div class="hero"><div><p class="eyebrow">YOUR FIELDWORK QUICK ACCESS</p><h1>Welcome to your<br><span>mini tracking hub.</span></h1><p class="hero-copy">Keep your frequently used tools and tracking resources in one organized place.</p><button class="primary-btn" id="browseBtn">Explore resources <span>→</span></button></div><div class="hero-art" aria-hidden="true"><div class="art-circle"><div class="art-card"><span class="art-check">✓</span><b>Organized</b><small>Work smarter</small></div><div class="art-card second"><span class="art-symbol">⌁</span><b>Connected</b><small>Quick access</small></div></div></div></div>
+      <div class="section-heading"><div><p class="eyebrow">QUICK LAUNCH</p><h2>Tracking resources</h2><p class="muted">Select a card to open its linked workspace.</p></div><div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search resources…" aria-label="Search resources"></div></div>
+      <div class="resource-grid" id="resourceGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>No resources found. Try a different search.</div>
+      <div class="tip-banner"><div class="tip-icon">✦</div><div><strong>Small tools, smoother fieldwork.</strong><p>Keep your resource links accessible and your browser bookmarks updated.</p></div><button class="text-btn" id="showAllBtn">Show all links →</button></div>
+    </section>
+    <section class="page" id="resourcesView" hidden><div class="section-heading"><div><p class="eyebrow">QUICK LAUNCH</p><h2>All resources</h2><p class="muted">Your reference links from the tracking workbook.</p></div><div class="search-wrap"><span>⌕</span><input id="resourceSearch" type="search" placeholder="Search resources…" aria-label="Search resources"></div></div><div class="resource-grid" id="resourceGridAll"></div><div class="empty-state" id="emptyAll" hidden>No resources found.</div></section>
+    <section class="page" id="aboutView" hidden><div class="about-card"><p class="eyebrow">ABOUT THIS PROJECT</p><h2>SWA Mini Tracking Website</h2><p>This lightweight dashboard was designed as a simple starting point for organizing links to frequently used work resources.</p><h3>Included shortcuts</h3><ul><li>Client Assistance Desk</li><li>CAD Schedule</li><li>Case Folder Tracking</li><li>Cash Card Spotcheck</li><li>ADN COMPASS</li><li>BINI</li></ul><div class="privacy-note"><strong>Privacy reminder:</strong> This is a link dashboard only. It does not collect or store beneficiary records. Follow office privacy and access policies when opening linked documents.</div></div></section>
+    <footer><span>© <span id="year"></span> SWA Mini Tracking Website</span><span>Designed for simple, quick access</span></footer>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
